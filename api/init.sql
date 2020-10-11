@@ -4,7 +4,7 @@
 -- https://www.sqlbook.com/sql/drop-table-if-exists/#:~:text=The%20DROP%20TABLE%20SQL%20statement,(deletion)%20of%20the%20table.
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
-    id INT PRIMARY KEY NOT NULL,
+    id INTEGER PRIMARY KEY,
     firstname VARCHAR(255),
     lastname VARCHAR(255),
     login VARCHAR(255),

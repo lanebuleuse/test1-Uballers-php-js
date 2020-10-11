@@ -78,7 +78,6 @@ $router->post('/api/register', function (Request $request) use ($router)
     // 2. Mettre les infos du json dans un user nouvellement créer
     $user = new User;
 
-    $user->id = 1;
     $user->firstname = $jsonData['firstname'];
     $user->lastname = $jsonData['lastname'];
     $user->login = $jsonData['login'];
