@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+<!--Dans un premier temps, élaboratio des 2 formulaires (login et register) 
+    comme base pour le php et le js-->
+<body>
+    <header>
+        <form action="">
+            <div>
+                <label for="">Adresse e-mail ou mobile</label>
+                <input type="text" id="login-emaik" name="login">
+            </div>
+            <div>
+                <label for="">Mot de passe</label>
+                <input type="text" id="login-password" name="password">
+                <span>Informations de compte oubliées?</span>
+                <!--span choisi pour éviter d'avoir du margin par défaut + type inline (lien) -->
+            </div>
+            <div>
+               <button type="submit">connexion</button> 
+            </div>
+        </form>
+    </header>
+    <main>
+        <h1>Inscription</h1>
+        <h2>C'est gratuit (et ça le restera toujours)</h2>
+        <form action="">
+            <div>
+                <input 
+                type="text" 
+                id="register-firstname" 
+                name="firstname" 
+                placeholder="Prénom">
+            </div>
+            <div>
+                <input 
+                type="text" 
+                id="register-lastname" 
+                name="lastname" 
+                placeholder="Nom de famille">
+            </div>
+            <div>
+                <input 
+                type="text" 
+                id="register-login" 
+                name="login" 
+                placeholder="Numéro de mobile ou email">
+            </div>
+            <div>
+                <input 
+                type="text" 
+                id="register-login-confirm"
+                name="login-confirm" 
+                placeholder="Confirmer numéro de mobile ou email">
+            </div>
+            <div>
+                <input 
+                type="text" 
+                id="register-newpassword" 
+                name="password"
+                placeholder="Nouveau mot de passe">
+            </div>
+            <!--https://developer.mozilla.org/fr/docs/Web/HTML/Element/select-->
+            <div>
+                <label for="">Date de naissance</label>
+                <select name="day" id="day">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                </select>
+                <select name="month" id="month">
+                    <option value="01">Janvier</option>
+                    <option value="02">Février</option>
+                    <option value="03">Mars</option>
+                    <option value="04">Avril</option>
+                    <option value="05">Mai</option>
+                </select>
+                <select name="year" id="year">
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                </select>
+            </div>
+            <div>
+                <span>Pourquoi indiquer ma date de naissance?</span>
+            </div>
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio-->
+            <div>
+                <!-- name: "gender" pour préciser le nom du champs $_POST en php
+                source: https://www.w3schools.com/php/php_superglobals_post.asp-->
+                <input type="radio" 
+                id="woman" 
+                name="gender"
+                value="woman">Femme
+                <input 
+                type="radio" 
+                id="man" 
+                name="gender"
+                value="man">Homme
+            </div>
+            <div>
+                <p>
+                    <!--target_blank : ouvre le lien dans une nouvelle page 
+                        source: https://html.com/attributes/a-target/#:~:text=browser%20specifies%20otherwise.-,a%20target%3D%E2%80%9D_blank%E2%80%9D%20Open%20in%20New%20Browser%20Tab%20(,older%20browsers)%20a%20new%20window.-->
+                    En cliquant sur S’inscrire, vous acceptez nos 
+                    <a href="/legal/terms/update" 
+                    id="terms-link" 
+                    target="_blank" 
+                    >Conditions générales</a>. 
+                    Découvrez comment nous recueillons, utilisons et partageons vos données en lisant notre 
+                    <a href="/about/privacy/update" 
+                    id="privacy-link" 
+                    target="_blank" >
+                    Politique d’utilisation des données</a> 
+                    et comment nous utilisons les cookies et autres technologies similaires en consultant notre 
+                    <a href="/policies/cookies/" 
+                    id="cookie-use-link" 
+                    target="_blank" >
+                    Politique d’utilisation des cookies</a>. 
+                    Vous recevrez peut-être des notifications par texto de notre part et vous pouvez à tout moment vous désabonner.
+                </p>
+            </div>
+            <div>
+                <button type="submit">Inscription</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
