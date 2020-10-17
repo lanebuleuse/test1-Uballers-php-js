@@ -37,7 +37,7 @@ $router->post('/api/login', function (Request $request) use ($router)
     // S'il existe pas retourner une erreur
     if (count($users) === 0)
     {
-        return response()->json(['success' => false, ], 404);
+        return response()->json(['success' => false, 'message' => 'user doesnt exists'], 404);
     }
 
     $user = $users->first(); // for return the first user
@@ -47,14 +47,14 @@ $router->post('/api/login', function (Request $request) use ($router)
         // In the case logged success
         // {"success": true, "token": "xxxx"} HTTP 200 OK
         return response()
-            ->json(['success' => true, 'login' => $user->login, ], 200);
+            ->json(['success' => true, 'login' => $user->login], 200);
 
     }
 
     // https://lumen.laravel.com/docs/5.2/responses#json-responses
     // si le mot de passe transmis pas l'user ne correspond pas ce qui est en base de données
     return response()
-        ->json(['success' => false, ], 400);
+        ->json(['success' => false, 'message' => 'bad password'], 400);
 
     // In the case the credential are bad
     // {“success": false} HTTP 400 Bad Request (les informations de l'utilisateur ne sont pas correct)

@@ -3,13 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--FR : Afin que le fichier JS soit chargé -->
+    <!--EN : So that the JS file is loaded-->
+    <script src="login.js" type="text/javascript"></script>
+    <script src="register.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
 </head>
 <!--FR : Dans un premier temps, élaboration des 2 formulaires (login et register) 
     comme base pour le php et le js-->
 <!--EN : First Time, Forms login and register in HTML for PHP and JS-->
 <body>
     <header>
-        <form action="">
+        <form action="" class="form-login">
             <div>
                 <label for="">Adresse e-mail ou mobile</label>
                 <input type="text" id="login-emaik" name="login">
@@ -29,7 +34,7 @@
     <main>
         <h1>Inscription</h1>
         <h2>C'est gratuit (et ça le restera toujours)</h2>
-        <form action="">
+        <form action="" class="form-register">
             <div>
                 <input 
                 type="text" 
